@@ -11,20 +11,24 @@ h6 {
     align-items: center;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
     padding: 0;
 }
 
 #particles-js {
-    position: fixed; /* Change to fixed */
+    position: fixed;
+    /* Change to fixed */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Keep it behind other content */
-    pointer-events: none; /* Prevents any interaction with the particle layer */
+    z-index: -1;
+    /* Keep it behind other content */
+    pointer-events: none;
+    /* Prevents any interaction with the particle layer */
 }
 
 ul {
@@ -54,7 +58,7 @@ hr {
 }
 
 .bg {
-    margin-top: 75px;
+    margin: 16px;
     background-color: rgb(19, 30, 56);
 }
 
@@ -66,7 +70,17 @@ hr {
     max-width: 1200px;
     width: 100%;
     margin: auto;
-    display: flex;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+@media (max-width: 767px) {
+
+    /* Adjust the 600px as needed */
+    .centered-div {
+        grid-template-columns: 1fr;
+        /* Changes to a single column */
+    }
 }
 
 .width {
@@ -78,7 +92,6 @@ hr {
 .skills {
     display: flex;
     width: 100%;
-    margin: 15px;
 }
 
 .skills-row {
@@ -112,7 +125,6 @@ hr {
 }
 
 .top-content {
-    width: 50%;
     padding: 5px;
     display: flex;
     flex-flow: column;
@@ -137,21 +149,31 @@ hr {
     justify-content: space-between;
 }
 
+@media (max-width: 767px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 .project-item {
-    max-width: 575px;
+    max-width: 767px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-
     border-radius: 10px;
     background-image: linear-gradient(rgb(19, 30, 56), rgb(19, 30, 56)), radial-gradient(circle at top left, #db7ac6, #6bd7e6);
     background-origin: border-box;
     background-clip: content-box, border-box;
     padding: 3px;
-
     margin-top: 15px;
+    margin-right: 15px;
     margin-bottom: 15px;
-    
+}
+
+@media (max-width: 767px) {
+    .project-item {
+        margin-right: 0px;
+    }
 }
 
 .project-title {
@@ -181,6 +203,7 @@ hr {
 .list-item:hover svg path {
     fill: #ff6347;
 }
+
 .project-link:hover svg path {
     fill: #ff6347;
 }
@@ -207,7 +230,7 @@ hr {
     margin-left: 15px;
 }
 
-.particle{
+.particle {
     position: absolute;
     height: 100%;
 }
