@@ -44,7 +44,7 @@ svg {
 
 p {
     color: rgb(148 163 184);
-    font-family: 'Inter'
+    font-family: 'Inter';
 }
 
 span {
@@ -78,7 +78,7 @@ hr {
 
     /* Adjust the 600px as needed */
     .centered-div {
-        grid-template-columns: 1fr;
+        grid-template-columns: 100%;
         /* Changes to a single column */
     }
 }
@@ -125,7 +125,6 @@ hr {
 }
 
 .top-content {
-    padding: 5px;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -151,7 +150,7 @@ hr {
 
 @media (max-width: 767px) {
     .project-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 100%;
     }
 }
 
